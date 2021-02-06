@@ -1,0 +1,246 @@
+$very-dark-magenta: hsl(300, 43%, 22%);
+$soft-pink: hsl(333, 80%, 67%);
+
+$dark-grayish-magenta: hsl(303, 10%, 53%);
+$light-grayish-magenta: hsl(300, 24%, 96%);
+$white: hsl(0, 0%, 100%);
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 15px;
+    font-family: 'Spartan', sans-serif;
+}
+
+.attribution {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    font-size: 11px;
+    text-align: center;
+
+    a {
+        color: hsl(228, 45%, 44%);
+        text-decoration: none;
+    }
+}
+
+main {
+    &.container {
+        max-width: 1110px;
+        padding-top: 130px;
+        margin: auto;
+    }
+
+    .bg-top-desktop,
+    .bg-bottom-desktop {
+        position: absolute;
+    }
+
+    .bg-top-desktop {
+        top: 0;
+        left: 0;
+    }
+
+    .bg-bottom-desktop {
+        bottom: 0;
+        right: 0;
+    }
+}
+
+section {
+    &.header {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2rem;
+
+        .intro {
+            width: 80%;
+        }
+    }
+
+    h1 {
+        color: $very-dark-magenta;
+        font-size: 45px;
+        line-height: 48px;
+    }
+
+    .rating {
+        margin-top: 15px;
+
+        .line {
+            color: $very-dark-magenta;
+            font-weight: 700;
+            font-size: 13px;
+
+            background-color: hsl(300, 24%, 96%);
+            width: 82%;
+            padding: 18px 30px;
+            border-radius: 8px;
+            margin-bottom: 18px;
+
+            img {
+                padding-right: 5px;
+            }
+
+            span {
+                padding-left: 25px;
+                vertical-align: top;
+            }
+
+            &:nth-child(2) {
+                margin-left: 50px;
+            }
+
+            &:nth-child(3) {
+                margin-left: 95px;
+            }
+        }
+    }
+
+    p {
+        color: hsl(303, 10%, 53%);
+        line-height: 26px;
+        margin-top: 14px;
+        letter-spacing: 0.1px;
+        font-size: 14px;
+    }
+
+    &.reviews {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 1.9rem;
+        margin-top: 68px;
+
+        .buyer {
+            display: flex;
+            margin-top: 22px;
+        }
+
+        .buyer-info {
+            padding-top: 4px;
+            padding-left: 23px;
+        }
+
+        h3 {
+            color: $white;
+            font-size: 13px;
+            padding-bottom: 4px;
+        }
+
+        span {
+            color: $soft-pink;
+            font-size: 13px;
+        }
+
+        p {
+            padding: 11px 3px;
+            color: $white;
+            line-height: 23px;
+            font-size: 12px;
+        }
+
+        img {
+            width: 40px;
+            border-radius: 100%;
+        }
+
+        article {
+            background-color: $very-dark-magenta;
+            height: 234px;
+            border-radius: 8px;
+            padding: 18px 32px;
+
+            &:nth-child(2) {
+                margin-top: 16px;
+            }
+
+            &:nth-child(3) {
+                margin-top: 32px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    main {
+        &.container {
+            padding-top: 90px;
+        }
+    }
+
+    section {
+        text-align: center;
+
+        &.header {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+
+        .intro {
+            margin: auto;
+            min-width: 89%;
+        }
+
+        h1 {
+            font-size: 30px;
+            line-height: normal;
+        }
+
+        p {}
+
+        .rating {
+            margin-top: -15px;
+
+            .line {
+                display: flex;
+                flex-flow: wrap;
+                justify-content: center;
+                margin: 10px auto;
+                width: 86%;
+
+                span {
+                    padding-top: 10px;
+                }
+
+                &:nth-child(2) {
+                    margin: 10px auto;
+                }
+
+                &:nth-child(3) {
+                    margin: 10px auto;
+                }
+            }
+        }
+
+        &.reviews {
+            grid-template-columns: none;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-gap: 1rem;
+            margin: 66px 24px;
+
+            article {
+                height: 248px;
+                text-align: left;
+
+                &:nth-child(2) {
+                    margin-top: 0;
+                }
+
+                &:nth-child(3) {
+                    margin-top: 0;
+                }
+            }
+        }
+
+    }
+}

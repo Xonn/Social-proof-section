@@ -1,0 +1,25 @@
+{
+  "name": "Social-proof-section",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "parcel": "parcel index.html --",
+    "build": "rm -rf dist/ && parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Xonn/Social-proof-section.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Xonn/Social-proof-section/issues"
+  },
+  "homepage": "https://github.com/Xonn/Social-proof-section#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.32.6"
+  }
+}
